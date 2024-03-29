@@ -32,7 +32,7 @@ export default function Component() {
 
   return (
     <div className="grid gap-4 px-4 md:gap-8">
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-2">
         <Link className="flex items-center space-x-2 text-sm font-medium group" href="#">
           <HomeIcon className="w-4 h-4 mr-2" />
           Home
