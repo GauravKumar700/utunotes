@@ -59,7 +59,7 @@ export default function Component() {
           </div>
           {cse && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Data Structures & Algorithms</h3>
@@ -70,7 +70,7 @@ export default function Component() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Computer Structures and Architecture</h3>
@@ -94,7 +94,7 @@ export default function Component() {
           </div>
           {mechanical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Mechanical Subject 1</h3>
@@ -105,7 +105,7 @@ export default function Component() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Mechanical Subject 2</h3>
@@ -129,7 +129,7 @@ export default function Component() {
           </div>
           {electrical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Electrical Subject 1</h3>
@@ -140,7 +140,7 @@ export default function Component() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Electrical Subject 2</h3>
@@ -164,7 +164,7 @@ export default function Component() {
           </div>
           {civil && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Civil Subject 1</h3>
@@ -175,7 +175,7 @@ export default function Component() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Civil Subject 2</h3>
@@ -199,7 +199,7 @@ export default function Component() {
           </div>
           {chemical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Chemical Subject 1</h3>
@@ -210,7 +210,7 @@ export default function Component() {
               </CardContent>
             </Card>
             <Card>
-              <CardContent className="grid items-center gap-4 p-4">
+              <CardContent className="flex items-center gap-4 p-4">
                 <BookOpenIcon className="w-8 h-8" />
                 <div className="grid gap-1">
                   <h3 className="font-semibold">Chemical Subject 2</h3>
