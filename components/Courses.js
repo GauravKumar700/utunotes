@@ -1,6 +1,7 @@
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { CardContent, Card } from "@/components/ui/card"
+import Link from "next/link"
 
 export default function Courses() {
     return (
@@ -24,90 +25,96 @@ export default function Courses() {
                         </div>
                     </div>
                     <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 justify-items-center gap-6 md:gap-y-8">
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
-                            </CardContent>
-                        </Card>
-                        <Card className="w-fit px-7 hover:cursor-pointer hover:bg-gray-100">
-                            <CardContent className="flex flex-col gap-5 p-6">
-                                <img
-                                    alt="Cover image"
-                                    className="aspect-square rounded-lg object-cover border"
-                                    height="100"
-                                    src="/bachelor.png"
-                                    width="100"
-                                />
-                                <h3 className="text-3xl text-center font-bold tracking-tight">B.Sc</h3>
-                            </CardContent>
-                        </Card>
+                        <Link href={'/courses/btech'}>
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">B.Tech</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
+                        <Link href={'/courses/bsc'}>
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">B.Sc</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
+                        <Link href={'/courses/bba'} >
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">BBA</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
+                        <Link href={'/courses/bca'}>
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">BCA</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
+                        <Link href={'/courses/mca'}>
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">MCA</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
+                        <Link href={'/courses/mba'}>
+                            <Card className="w-fit px-7 hover:cursor-pointer transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:bg-gray-400 duration-300 border-2 border-gray-600">
+                                <CardContent className="flex flex-col gap-5 p-6">
+                                    <img
+                                        alt="Cover image"
+                                        className="aspect-square rounded-lg object-cover border"
+                                        height="100"
+                                        src="/bachelor.png"
+                                        width="100"
+                                    />
+                                    <h3 className="text-3xl text-center font-bold tracking-tight">MBA</h3>
+                                </CardContent>
+                            </Card>
+                        </Link>
+
                     </div>
                 </div>
             </div>

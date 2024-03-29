@@ -5,7 +5,7 @@ import React from 'react'
 const Navbar = () => {
     return (
         <header className="px-4 lg:px-6 py-4 lg:py-6 flex items-center">
-            <div className="flex items-center gap-3 space-x-2 md:pl-7">
+            <div className="flex items-center gap-3 space-x-2">
                 <Image
                     alt="Logo"
                     className="rounded-full"
