@@ -4,8 +4,7 @@ import Link from "next/link"
 import { ChevronDownIcon } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
-
-const page = () => {
+export default function page() {
   const [cse, setCse] = useState(false)
   const onToggleCse = () => {
     setCse(!cse)
@@ -34,7 +33,7 @@ const page = () => {
   return (
     <div className="grid gap-4 px-4 md:gap-8">
       <div className="flex items-center space-x-1">
-        <Link className="flex items-center space-x-2 text-sm font-medium group" href="#">
+        <Link className="flex items-center space-x-2 text-sm font-medium group" href="/">
           <HomeIcon className="w-4 h-4 mr-2" />
           Home
         </Link>
@@ -59,28 +58,32 @@ const page = () => {
             </div>
           </div>
           {cse && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Data Structures & Algorithms</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Learn about data organization and management.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Computer Structures and Architecture</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Explore the design and analysis of Computer.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link href={'/notes/data-structure-algorithms'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Data Structures & Algorithms</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Learn about data organization and management.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={'/notes/computer-organisation-architecture'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Computer Organisation and Architecture</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Explore the design and analysis of Computer.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>}
         </div>
 
@@ -94,28 +97,32 @@ const page = () => {
             </div>
           </div>
           {mechanical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Mechanical Subject 1</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Learn about data organization and management.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Mechanical Subject 2</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Explore the design and analysis of Computer.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link href={'/notes/mechanical-subject1'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Mechanical Subject 1</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Learn about data organization and management.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={'/notes/mechanical-subject2'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Mechanical Subject 2</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Explore the design and analysis of Computer.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>}
         </div>
 
@@ -129,28 +136,32 @@ const page = () => {
             </div>
           </div>
           {electrical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Electrical Subject 1</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Learn about data organization and management.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Electrical Subject 2</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Explore the design and analysis of Computer.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link href={'/notes/electrical-subject1'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Electrical Subject 1</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Learn about data organization and management.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={'/notes/electrical-subject2'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Electrical Subject 2</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Explore the design and analysis of Computer.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>}
         </div>
 
@@ -164,28 +175,32 @@ const page = () => {
             </div>
           </div>
           {civil && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Civil Subject 1</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Learn about data organization and management.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Civil Subject 2</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Explore the design and analysis of Computer.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link href={'/notes/civil-subject1'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Civil Subject 1</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Learn about data organization and management.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={'/notes/civil-subject2'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Civil Subject 2</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Explore the design and analysis of Computer.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>}
         </div>
 
@@ -199,28 +214,32 @@ const page = () => {
             </div>
           </div>
           {chemical && <div className="grid cursor-pointer items-center mt-4 gap-y-4 p-0 w-full">
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Chemical Subject 1</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Learn about data organization and management.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-center gap-4 p-4">
-                <BookOpenIcon className="w-8 h-8" />
-                <div className="grid gap-1">
-                  <h3 className="font-semibold">Chemical Subject 2</h3>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    Explore the design and analysis of Computer.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
+            <Link href={'/notes/chemical-subject1'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Chemical Subject 1</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Learn about data organization and management.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
+            <Link href={'/notes/chemical-subject2'}>
+              <Card>
+                <CardContent className="flex items-center gap-4 p-4">
+                  <BookOpenIcon className="w-8 h-8" />
+                  <div className="grid gap-1">
+                    <h3 className="font-semibold">Chemical Subject 2</h3>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      Explore the design and analysis of Computer.
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            </Link>
           </div>}
         </div>
 
@@ -289,5 +308,3 @@ function HomeIcon(props) {
     </svg>
   )
 }
-
-export default page
