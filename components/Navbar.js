@@ -18,7 +18,7 @@ const Navbar = () => {
     }
 
     return (
-        <header className="px-4 lg:px-6 py-4 lg:py-6 flex justify-between items-center border-b-4 border-slate-400">
+        <header className="px-4 fixed top-0 left-0 right-0 bg-white lg:px-6 py-4 lg:py-6 flex justify-between items-center border-b-4 border-slate-400">
             <Link href={'/'}>
                 <div className="flex items-center gap-3 space-x-2">
                     <Image
@@ -36,7 +36,7 @@ const Navbar = () => {
                 </div>
             </Link>
 
-            <div className='sm:hidden absolute top-6 right-4' onClick={handleClick}>
+            <div className='sm:hidden fixed top-6 right-4 z-20' onClick={handleClick}>
                 <AlignJustify />
             </div>
 
