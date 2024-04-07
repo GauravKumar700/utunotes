@@ -4,7 +4,8 @@ import Link from "next/link"
 import { ChevronDownIcon } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 
-export default function page() {
+
+const page = () => {
   const [cse, setCse] = useState(false)
   const onToggleCse = () => {
     setCse(!cse)
@@ -288,3 +289,5 @@ function HomeIcon(props) {
     </svg>
   )
 }
+
+export default page
