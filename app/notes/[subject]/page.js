@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
     const subject = params.subject
     const makeFirstLetterCapital = (sentence) => {
         // Split the sentence into an array of words
@@ -116,4 +116,4 @@ const page = ({ params }) => {
     )
 }
 
-export default page
+export default Page
