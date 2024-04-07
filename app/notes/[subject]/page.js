@@ -4,6 +4,21 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
 const page = ({ params }) => {
+    const subject = params.subject
+    const makeFirstLetterCapital = (sentence) => {
+        // Split the sentence into an array of words
+        const words = sentence.split("-");
+
+        // Loop through each word in the array
+        const capitalizedWords = words.map(word => {
+            // Capitalize the first letter of each word and concatenate it with the rest of the word
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        });
+
+        // Join the capitalized words back into a sentence
+        return capitalizedWords.join(" ");
+    }
+
     return (
         <>
             <div>Your Subject : {params.subject}</div>
@@ -19,7 +34,7 @@ const page = ({ params }) => {
             </div>
             <div className="grid container items-center w-full gap-4 py-6 md:grid-cols-2 lg:gap-12 xl:gap-16">
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-3xl text-center font-bold tracking-tighter sm:text-4xl xl:text-5xl">Data Structures and Algorithms</h2>
+                    <h2 className="text-3xl text-center font-bold sm:text-4xl xl:text-5xl">{makeFirstLetterCapital(subject)}</h2>
                     <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                         A collection of beautifully designed note previews that add a touch of elegance to your content. These notes
                         are perfect for blog posts, documentation, or any other web page where you want to showcase information in
