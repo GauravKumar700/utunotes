@@ -22,16 +22,16 @@ const Navbar = () => {
                 </div>
             </Link>
             <nav className="ml-auto sm:flex gap-4 sm:gap-6 pr-7 sm:visible hidden">
-                <Link className="text-lg font-medium hover:underline underline-offset-4" href="#">
+                <Link className="text-lg font-medium hover:underline underline-offset-4" href={"/"}>
                     Home
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4" href="#">
+                <Link className="text-lg font-medium hover:underline underline-offset-4" href={"/notes"}>
                     Notes
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4" href="#">
+                <Link className="text-lg font-medium hover:underline underline-offset-4" href={"/about"}>
                     About
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4" href="#">
+                <Link className="text-lg font-medium hover:underline underline-offset-4" href={"/contact"}>
                     Contact
                 </Link>
             </nav>
