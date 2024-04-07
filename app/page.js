@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 border-b-4">
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800 border-b-4 border-slate-400">
           <div className="container flex flex-col gap-4 px-4 text-center md:px-6 lg:gap-10">
             <div className="space-y-3">
               <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
