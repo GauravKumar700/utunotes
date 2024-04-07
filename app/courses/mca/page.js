@@ -32,12 +32,12 @@ export default function Page() {
 
   return (
     <div className="grid gap-4 px-4 md:gap-8">
-      <div className="flex items-center space-x-1">
+      <div className="flex items-center space-x-1 pt-4">
         <Link className="flex items-center space-x-2 text-sm font-medium group" href="/">
           <HomeIcon className="w-4 h-4 mr-2" />
           Home
         </Link>
-        <ChevronRightIcon className="h-4 opacity-50" />
+        <ChevronRightIcon className="h-4" />
         <Link className="flex items-center space-x-2 text-sm font-medium group" href="#">
           <BookOpenIcon className="w-4 h-4 mr-2" />
           Branches
@@ -48,9 +48,9 @@ export default function Page() {
         Click on a branch to view Subjects and purchase notes.
       </p>
       <div className="grid gap-6 md:gap-8">
-        <div onClick={onToggleCse} className="relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg">
+        <div onClick={onToggleCse} className="md:relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg">
           <div className="flex w-full items-center">
-            {!cse ? <ChevronRightIcon className="mr-4 h-6 opacity-50" /> :
+            {!cse ? <ChevronRightIcon className="mr-4 h-6" /> :
               <ChevronDownIcon className='mr-4 h-6' />}
             <div className="grid gap-1">
               <h2 className="font-semibold">Computer Science</h2>
@@ -87,7 +87,7 @@ export default function Page() {
           </div>}
         </div>
 
-        <div onClick={onToggleMechanical} className="relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
+        <div onClick={onToggleMechanical} className="md:relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
           <div className="flex w-full items-center">
             {!mechanical ? <ChevronRightIcon className="mr-4 h-6 opacity-50" /> :
               <ChevronDownIcon className='mr-4 h-6' />}
@@ -126,7 +126,7 @@ export default function Page() {
           </div>}
         </div>
 
-        <div onClick={onToggleElectrical} className="relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
+        <div onClick={onToggleElectrical} className="md:relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
           <div className="flex w-full items-center">
             {!electrical ? <ChevronRightIcon className="mr-4 h-6 opacity-50" /> :
               <ChevronDownIcon className='mr-4 h-6' />}
@@ -165,7 +165,7 @@ export default function Page() {
           </div>}
         </div>
 
-        <div onClick={onToggleCivil} className="relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
+        <div onClick={onToggleCivil} className="md:relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
           <div className="flex w-full items-center">
             {!civil ? <ChevronRightIcon className="mr-4 h-6 opacity-50" /> :
               <ChevronDownIcon className='mr-4 h-6' />}
@@ -204,7 +204,7 @@ export default function Page() {
           </div>}
         </div>
 
-        <div onClick={onToggleChemical} className="relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
+        <div onClick={onToggleChemical} className="md:relative flex flex-col cursor-pointer items-center p-4 rounded-lg border-2 hover:z-10 hover:shadow-lg" href="#">
           <div className="flex w-full items-center">
             {!chemical ? <ChevronRightIcon className="mr-4 h-6 opacity-50" /> :
               <ChevronDownIcon className='mr-4 h-6' />}

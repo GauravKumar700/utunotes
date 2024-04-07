@@ -40,7 +40,7 @@ const Navbar = () => {
                 <AlignJustify />
             </div>
 
-            <nav className="ml-auto fixed top-[-100%] left-0 mt-20 bg-white justify-center items-center w-screen gap-4 flex flex-col rounded-lg navMenu">
+            <nav className="ml-auto fixed top-[-100%] left-0 z-50 mt-20 bg-white justify-center items-center w-screen gap-4 flex flex-col rounded-lg navMenu">
                 <Link className="text-lg text-center w-full font-medium hover:underline underline-offset-4 py-2" href={"/"} onClick={handleClick}>
                     Home
                 </Link>
