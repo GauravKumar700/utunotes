@@ -41,16 +41,16 @@ const Navbar = () => {
             </div>
 
             <nav className="ml-auto fixed top-[-100%] left-0 mt-20 bg-white justify-center items-center w-screen gap-4 flex flex-col rounded-lg navMenu">
-                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/"}>
+                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/"} onClick={handleClick}>
                     Home
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/notes"}>
+                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/notes"} onClick={handleClick}>
                     Notes
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/about"}>
+                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/about"} onClick={handleClick}>
                     About
                 </Link>
-                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/contact"}>
+                <Link className="text-lg font-medium hover:underline underline-offset-4 py-2" href={"/contact"} onClick={handleClick}>
                     Contact
                 </Link>
             </nav>
