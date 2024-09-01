@@ -1,9 +1,17 @@
-import React from 'react'
+'use client'
+import React, { useState, useEffect } from 'react';
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+// import { Viewer, Worker } from '@react-pdf-viewer/core';
+// import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
+// import `@react-pdf-viewer/core/lib/styles/index.css`
+// import `@react-pdf-viewer/default-layout/lib/styles/index.css`
 
 const Page = ({ params }) => {
+    const [pdfFile, setpdfFile] = useState(null);
+    let data = fetch('http://localhost:3000/api/notes/')
+
     const subject = params.subject
     const makeFirstLetterCapital = (sentence) => {
         // Split the sentence into an array of words
@@ -34,7 +42,7 @@ const Page = ({ params }) => {
             </div>
             <div className="grid container items-center w-full gap-4 py-6 md:grid-cols-2 lg:gap-12 xl:gap-16">
                 <div className="flex flex-col gap-2">
-                    <h2 className="text-3xl text-center font-bold sm:text-4xl xl:text-5xl">{makeFirstLetterCapital(subject)}</h2>
+                    <h2 className="text-3xl font-bold sm:text-4xl xl:text-5xl">{makeFirstLetterCapital(subject)}</h2>
                     <p className="text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                         A collection of beautifully designed note previews that add a touch of elegance to your content. These notes
                         are perfect for blog posts, documentation, or any other web page where you want to showcase information in
@@ -42,13 +50,27 @@ const Page = ({ params }) => {
                     </p>
                 </div>
                 <div className="flex items-start justify-center">
-                    <img
+                    {/* <img
                         alt="Shimmering Lights"
                         className="aspect-[2/1] overflow-hidden rounded-lg object-cover object-center"
                         height="300"
                         src="/placeholder.jpg"
                         width="600"
-                    />
+                    /> */}
+                    <iframe
+                        alt="Shimmering Lights"
+                        src={"Data-Structure-Algorithm.pdf"}
+                        // href="../notes/Data-Structure-Algorithm.pdf"
+                        width="100%"
+                        height="300px"
+                        // className="border-2 border-gray-200 rounded-lg"
+                        className='border-4 border-slate-400 aspect-[2/1] overflow-hidden rounded-lg object-cover object-center'
+                        title="Notes Preview"
+                    ></iframe>
+
+                    {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                        <Viewer fileUrl={data} plugins={[newplugin]} />                        </Worker> */}
+
                 </div>
             </div>
 
@@ -62,12 +84,12 @@ const Page = ({ params }) => {
             </div>
 
             <div className='w-full flex justify-center items-center py-8'>
-                <Link
+                <a
                     className="inline-flex md:w-96 justify-center items-center rounded-lg border border-gray-200 bg-gray-100 h-10 px-4 text-sm md:text-base font-medium shadow-sm transition-colors hover:bg-gray-300 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-950 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300"
-                    href="#"
+                    href="../notes/Data-Structure-Algorithm.docx" download={"Data-Structure-Algorithm.docx"}
                 >
-                    View Note Preview
-                </Link>
+                    Download Notes
+                </a>
             </div>
 
             <div className="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950">
